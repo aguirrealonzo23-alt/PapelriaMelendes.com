@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Menú Vertical Floral - Fondo Papelería</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+  /* Fondo floral y papelería */
+  body {
+    margin: 0;
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1470&q=80') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+  }
+
+  /* Capa blanca translúcida para suavizar el fondo */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.5);
+    z-index: 0;
+  }
+
+  nav {
+    position: relative;
+    z-index: 1;
+    background: linear-gradient(135deg, #fff0f5cc, #ffe4e1cc);
+    border-radius: 20px;
+    padding: 40px 50px;
+    box-shadow: 0 15px 40px rgba(201, 95, 122, 0.3);
+    min-width: 260px;
+    max-width: 320px;
+  }
+
+  ul.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  ul.menu li a {
+    color: #7a3e56;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.3rem;
+    padding: 16px 25px;
+    border-radius: 18px;
+    background: transparent;
+    transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.25s ease;
+    display: block;
+    text-align: center;
+    position: relative;
+  }
+
+  ul.menu li a:hover,
+  ul.menu li a:focus {
+    background: linear-gradient(135deg, #c95f7a, #7a3e56);
+    color: #f59e9e;
+    box-shadow: 0 12px 35px rgba(201, 95, 122, 0.7);
+    transform: translateX(12px);
+    outline: none;
+  }
+
+  ul.menu li a::after {
+    content: "";
+    position: absolute;
+    left: 20px;
+    bottom: 10px;
+    width: 0;
+    height: 4px;
+    background: #c95f7a;
+    border-radius: 6px;
+    transition: width 0.3s ease;
+  }
+
+  ul.menu li a:hover::after,
+  ul.menu li a:focus::after {
+    width: 80%;
+  }
+
+  /* Adaptación móvil */
+  @media (max-width: 600px) {
+    nav {
+      min-width: 90%;
+      padding: 25px 30px;
+      border-radius: 15px;
+    }
+    ul.menu li a {
+      font-size: 1.1rem;
+      padding: 14px 18px;
+    }
+  }
+</style>
+</head>
+<body>
+  <nav>
+    <ul class="menu">
+      <li><a href="inicio.html">Inicio</a></li>
+      <li><a href="servicio.html">Servicios</a></li>
+      <li><a href="producto.html">Productos</a></li>
+      <li><a href="contacto.html">Contáctanos</a></li>
+      <li><a href="session.html">Sección</a></li>
+      <li><a href="acerca de.html">Acerca de:</a></li>
+    </ul>
+  </nav>
+</body>
+</html>
