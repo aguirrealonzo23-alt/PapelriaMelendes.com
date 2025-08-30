@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Mochilas Escolares - Papelería Meléndez</title>
+<style>
+   @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+  body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: #fff0f5; /* suave rosado claro */
+  }
+
+    nav {
+    background: linear-gradient(135deg, #c95f7a, #7a3e56);
+    box-shadow: 0 4px 15px rgba(201, 95, 122, 0.4);
+    padding: 15px 30px;
+  }
+
+  ul.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  ul.menu li {
+    position: relative;
+  }
+
+  ul.menu li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 8px 15px;
+    border-radius: 12px;
+    transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+  }
+
+  ul.menu li a:hover,
+  ul.menu li a:focus {
+    background: #ffe4e1;
+    color: #7a3e56;
+    box-shadow: 0 8px 20px rgba(201, 95, 122, 0.6);
+    transform: translateY(-3px);
+    outline: none;
+  }
+
+  /* Subrayado animado */
+  ul.menu li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 3px;
+    background: #ffe4e1;
+    border-radius: 5px;
+    transition: width 0.3s ease;
+  }
+
+  ul.menu li a:hover::after,
+  ul.menu li a:focus::after {
+    width: 100%;
+  }
+
+  /* Responsive pequeño */
+  @media (max-width: 600px) {
+    ul.menu {
+      flex-direction: column;
+      gap: 15px;
+      align-items: center;
+    }
+  }
+
+
+  .contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .producto {
+   background: linear-gradient(135deg, #c95f7a, #7a3e56);
+    border-radius: 15px;
+    padding: 20px;
+    width: 220px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(92, 248, 188, 0.4);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+  }
+  .producto:hover {
+    background: linear-gradient(90deg, #7FDBFF 0%, #f6a2a6 100%);
+    box-shadow: 0 12px 35px rgba(127, 219, 255, 0.6);
+  }
+
+  .producto img {
+    width: 140px;
+    height: 140px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    object-fit: cover;
+  }
+
+  .producto h3 {
+    color: white;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+  }
+
+  .producto p {
+    color: white;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  .boton {
+    background: #0c0b0b;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    display: inline-block;
+    font-weight: 700;
+    transition: background 0.3s ease;
+  }
+
+  .boton:hover {
+   background: linear-gradient(135deg, #c95f7a, #7a3e56);
+  }
+
+  @media (max-width: 700px) {
+    main {
+      margin: 40px 20px;
+      padding: 30px 20px;
+    }
+    main h1 {
+      font-size: 2.5rem;
+    }
+    .contenedor {
+      gap: 20px;
+    }
+    .producto {
+      width: 100%;
+      max-width: 320px;
+      margin: 0 auto;
+    }
+    .producto img {
+      width: 100%;
+      height: auto;
+    }
+  }
+</style>
+</head>
+<body>
+  <nav>
+    <ul class="menu">
+      <li><a href="inicio.html">Inicio</a></li>
+      <li><a href="servicio.html">Servicios</a></li>
+      <li><a href="contacto.html">Contáctanos</a></li>
+      <li><a href="session.html">Sección</a></li>
+      <li><a href="acerca de.html">Acerca de empresa</a></li>
+    </ul>
+  </nav>
+  <br>
+    <div class="contenedor">
+      <div class="producto">
+        <img src="mochila de car wash.jpg" alt="Mochila Azul" />
+        <h3>Mochila Azul</h3>
+        <p>Lps. 350.00</p>
+        <a href="mochilas.html" class="boton">Ver más</a>
+      </div>
+      <div class="producto">
+        <img src="lonchera de games.jpg" alt="Lonchera" />
+        <h3>Lonchera</h3>
+        <p>Lps. 320.00</p>
+        <a href="lonchera.html" class="boton">Ver más</a>
+      </div>
+      <div class="producto">
+        <img src="mochila de mario.jpg" alt="Botellas" />
+        <h3>Botellas</h3>
+        <p>Lps. 450.00</p>
+        <a href="botellas.html" class="boton">Ver más</a>
+      </div>
+      <div class="producto">
+        <img src="lapiz.jpg" alt="Botellas" />
+        <h3>Lapiz</h3>
+        <p>Lps. 450.00</p>
+        <a href="lapiz.html" class="boton">Ver más</a>
+      </div>
+    </div>
+    <br>
+    <a href="producto.html" style="
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 16px;
+      background: linear-gradient(135deg, #c95f7a, #7a3e56);
+      color: white;
+      text-decoration: none;
+      border-radius: 25px;
+      transition: background 0.3s ease;
+     ">
+      ⬅ Volver a Productos
+    </a>
+
+
+
+</body>
+</html>

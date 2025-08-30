@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Botellas Escolares</title>
+  <style>
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+  body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: #fff0f5; /* suave rosado claro */
+  }
+
+  nav {
+    background: linear-gradient(135deg, #c95f7a, #7a3e56);
+    box-shadow: 0 4px 15px rgba(201, 95, 122, 0.4);
+    padding: 15px 30px;
+  }
+
+  ul.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  ul.menu li {
+    position: relative;
+  }
+
+  ul.menu li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 8px 15px;
+    border-radius: 12px;
+    transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+  }
+
+  ul.menu li a:hover,
+  ul.menu li a:focus {
+    background: #ffe4e1;
+    color: #7a3e56;
+    box-shadow: 0 8px 20px rgba(201, 95, 122, 0.6);
+    transform: translateY(-3px);
+    outline: none;
+  }
+
+  /* Subrayado animado */
+  ul.menu li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 3px;
+    background: #ffe4e1;
+    border-radius: 5px;
+    transition: width 0.3s ease;
+  }
+
+  ul.menu li a:hover::after,
+  ul.menu li a:focus::after {
+    width: 100%;
+  }
+
+  /* Responsive pequeño */
+  @media (max-width: 600px) {
+    ul.menu {
+      flex-direction: column;
+      gap: 15px;
+      align-items: center;
+    }
+  }
+
+    
+    .contenedor-productos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 80px;
+    }
+     .tarjeta {
+       background: linear-gradient(135deg, #c95f7a, #7a3e56);
+      border-radius: 10px;
+      padding: 15px;
+      width: 200px;
+      text-align: center;
+      box-shadow:linear-gradient(90deg, #5cf8bc 0%, #f6a2a6 100%);
+    }
+    .tarjeta:hover {
+       background: linear-gradient(135deg, #c95f7a, #7a3e56);
+    }
+     .tarjeta img {
+      width: 100px;
+      height: 100px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+    .tarjeta h3 {
+      color: white;
+      margin-bottom: 10px;
+    }
+
+    .boton {
+      background: linear-gradient(90deg, #5cf8bc 0%, #f6a2a6 100%);
+     color: white;
+     text-decoration: none;
+     padding: 8px 16px;
+     border-radius: 5px;
+     display: inline-block;
+     font-weight: bold;
+    }
+    .boton:hover {
+     background: linear-gradient(90deg, #7FDBFF 0%, #f6a2a6 100%);
+    }
+  </style>
+</head>
+<body>
+    <nav>
+    <ul class="menu">
+      <li><a href="inicio.html">Inicio</a></li>
+      <li><a href="servicio.html">Servicios</a></li>
+      <li><a href="contacto.html">Contáctanos</a></li>
+      <li><a href="session.html">Sección</a></li>
+      <li><a href="acerca de.html">Acerca de empresa</a></li>
+    </ul>
+  </nav>
+  <br>
+    <div class="contenedor">
+        <div class="producto">
+         <img src="botellas1.jpg" alt="Botella 1">
+         <h3>Botella Azul</h3>
+         <p>Lps. 110.00</p>
+        </div>
+        <div class="producto">
+         <img src="botellas2.jpg" alt="Botella 2">
+         <h3>Botella Rosa</h3>
+         <p>Lps. 115.00</p>
+        </div>
+        <div class="producto">
+         <img src="botellas3.jpg" alt="Botella 3">
+         <h3>Botella Deportiva</h3>
+         <p>Lps. 130.00</p>
+        </div>
+        <div class="producto">
+         <img src="botellas4.jpg" alt="Botella 4">
+         <h3>Botella Animalitos</h3>
+         <p>Lps. 125.00</p>
+        </div>
+    </div>
+
+   <div class="contenedor">
+       <div class="producto">
+         <img src="botellas5.jpg" alt="Botella 1">
+         <h3>Botella Azul</h3>
+         <p>Lps. 110.00</p>
+        </div>
+        <div class="producto">
+         <img src="botellas6.jpg" alt="Botella 2">
+         <h3>Botella Rosa</h3>
+         <p>Lps. 115.00</p>
+        </div>
+        <div class="producto">
+         <img src="botellas7.jpg" alt="Botella 3">
+         <h3>Botella Deportiva</h3>
+         <p>Lps. 130.00</p>
+        </div>
+        <div class="producto">
+         <img src="botellas8.jpg" alt="Botella 4">
+         <h3>Botella Animalitos</h3>
+         <p>Lps. 125.00</p>
+        </div>
+  </div>
+
+   <div class="contenedor">
+    <div class="producto">
+      <img src="botellas9.jpg" alt="Botella 1">
+      <h3>Botella Azul</h3>
+      <p>Lps. 110.00</p>
+    </div>
+    <div class="producto">
+      <img src="botellas10.jpg" alt="Botella 2">
+      <h3>Botella Rosa</h3>
+      <p>Lps. 115.00</p>
+    </div>
+    <div class="producto">
+      <img src="botellones.jpg" alt="Botella 3">
+      <h3>Botella Deportiva</h3>
+      <p>Lps. 130.00</p>
+    </div>
+    <div class="producto">
+      <img src="botellas4.jpg" alt="Botella 4">
+      <h3>Botella Animalitos</h3>
+      <p>Lps. 125.00</p>
+    </div>
+  </div>
+  <a href="accesorios.html" style="
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 16px;
+      background: linear-gradient(135deg, #c95f7a, #7a3e56);
+      color: white;
+      text-decoration: none;
+      border-radius: 25px;
+      transition: background 0.3s ease;
+     ">
+      ⬅ Volver a Accesorios
+    </a>
+
+</body>
+</html>

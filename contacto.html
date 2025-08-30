@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Contáctanos - Papelería Meléndez</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+  body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    min-height: 100vh;
+    background: url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1470&q=80') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+    color: #7a3e56;
+  }
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(255,255,255,0.5);
+    z-index: 0;
+  }
+  nav {
+    position: relative;
+    width: 100%;
+    background: linear-gradient(135deg, #fff0f5cc, #ffe4e1cc);
+    box-shadow: 0 6px 15px rgba(201, 95, 122, 0.3);
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+    border-radius: 0 0 20px 20px;
+  }
+  ul.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 40px;
+  }
+  ul.menu li a {
+    color: #7a3e56;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.3rem;
+    padding: 10px 25px;
+    border-radius: 18px;
+    background: transparent;
+    transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.25s ease;
+    display: block;
+    text-align: center;
+    position: relative;
+  }
+  ul.menu li a:hover,
+  ul.menu li a:focus {
+    background: linear-gradient(135deg, #c95f7a, #7a3e56);
+    color: #fff;
+    box-shadow: 0 8px 25px rgba(201, 95, 122, 0.6);
+    transform: translateY(-3px);
+    outline: none;
+  }
+  ul.menu li a::after {
+    content: "";
+    position: absolute;
+    left: 15px;
+    bottom: 6px;
+    width: 0;
+    height: 3px;
+    background: #c95f7a;
+    border-radius: 5px;
+    transition: width 0.3s ease;
+  }
+  ul.menu li a:hover::after,
+  ul.menu li a:focus::after {
+    width: 90%;
+  }
+  main {
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+    margin: 60px auto 40px auto;
+    background: linear-gradient(135deg, #fff0f5cc, #ffe4e1cc);
+    border-radius: 20px;
+    padding: 40px 50px;
+    box-shadow: 0 15px 40px rgba(201, 95, 122, 0.3);
+    color: #7a3e56;
+  }
+  main h1 {
+    font-size: 3rem;
+    margin-bottom: 25px;
+    background: linear-gradient(45deg, #c95f7a, #7a3e56);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    text-align: center;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  label {
+    font-weight: 700;
+    font-size: 1.1rem;
+  }
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    padding: 12px 15px;
+    border: 2px solid #c95f7a;
+    border-radius: 15px;
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    transition: border-color 0.3s ease;
+    resize: vertical;
+  }
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  textarea:focus {
+    border-color: #7a3e56;
+    outline: none;
+  }
+  textarea {
+    min-height: 120px;
+  }
+  button {
+    background: linear-gradient(135deg, #c95f7a, #7a3e56);
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.2rem;
+    padding: 15px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 7px 20px rgba(201, 95, 122, 0.5);
+    transition: background 0.3s ease, transform 0.25s ease;
+  }
+  button:hover,
+  button:focus {
+    background: linear-gradient(135deg, #7a3e56, #c95f7a);
+    transform: translateY(-3px);
+    outline: none;
+  }
+  @media (max-width: 600px) {
+    main {
+      margin: 40px 20px;
+      padding: 30px 20px;
+    }
+    main h1 {
+      font-size: 2.2rem;
+    }
+  }
+</style>
+</head>
+<body>
+  <nav>
+    <ul class="menu">
+      <li><a href="inicio.html">Inicio</a></li>
+      <li><a href="servicio.html">Servicios</a></li>
+      <li><a href="producto.html">Productos</a></li>
+      <li><a href="session.html">Sección</a></li>
+      <li><a href="acerca de.html">Acerca de la empresa</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1>Contáctanos</h1>
+    <form action="#" method="post" novalidate>
+      <label for="name">Nombre completo</label>
+      <input type="text" id="name" name="name" placeholder="Tu nombre" required />
+
+      <label for="email">Correo electrónico</label>
+      <input type="email" id="email" name="email" placeholder="tu@correo.com" required />
+
+      <label for="message">Mensaje</label>
+      <textarea id="message" name="message" placeholder="Escribe aquí tu mensaje..." required></textarea>
+
+      <button type="submit">Enviar mensaje</button>
+    </form>
+  </main>
+</body>
+</html>
